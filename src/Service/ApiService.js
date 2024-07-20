@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = "https://banzon-sb.yeems214.xyz/";
 
-export const login = async (username, password) => {
+export const login = async ({ username, password }) => {
     try {
         console.log('Sending login request with username and password:', username, password);
         

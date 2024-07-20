@@ -22,7 +22,15 @@ const LoginForm = () => {
         event.preventDefault();
         try {
             const response = await login({ username, password });
-            alertMessage(response.Message);
+    
+            // Check if response is a plain string or an object
+            if (typeof response === 'string') {
+                alertMessage(response); // Directly use the string message
+            } else if (response && response.Message) {
+                alertMessage(response.Message); // Use the Message field from the object
+            } else {
+                alertMessage('Login failed: Unknown error'); // Handle unexpected responses
+            }
         } catch (error) {
             if (error.response && error.response.data && error.response.data.Message) {
                 alertMessage(`Login failed: ${error.response.data.Message}`);
