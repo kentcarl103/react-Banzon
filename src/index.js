@@ -4,8 +4,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import AddMusic from './Components/AddMusic';
+import Dashboard from './Components/Dashboard';
 import LandingPage from './Components/LandingPage';
-import Login from './Components/Login';
+import LoginForm from './Components/LoginForm';
 import Signup from './Components/Signup';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -17,13 +19,20 @@ const router = createBrowserRouter([
   },
   {
     path: "Signin",
-    element: <Login />,
+    element: <LoginForm />,
   },
   {
     path: "Signup",
     element: <Signup />,
   },
-
+  {
+    path: "Dashboard",
+    element: <Dashboard/>
+  },
+  {
+    path:"AddMusic",
+    element: <AddMusic/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

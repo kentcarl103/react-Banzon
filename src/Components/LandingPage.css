@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally with space between */
+    align-items: center; /* Center items vertically */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%; /* Full width of the viewport */
+    position: fixed; /* Fixed position to stick to the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left edge of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-logo h1 {
+    font-size: 24px;
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for horizontal list */
+}
+
+.nav-links ul li {
+    margin-right: 10px;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+.welcome-message h2 {
+    font-size: 24px;
+    color: #333; /* Adjust color as needed */
+}
+
